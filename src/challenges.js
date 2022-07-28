@@ -211,14 +211,63 @@ return contMaior;
 //console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
+
+	function distancia (x,y){
+		let d;
+		d = x-y;
+
+		if(d<0){
+			d=-1*d;
+		}
+
+		return d;
+	}
+	//console.log("d m e c1 "+distancia(mouse,cat1));
+	//console.log("d m e c2 "+distancia(mouse,cat2));
+
+	if(distancia(mouse,cat1)>distancia(mouse,cat2)){
+		
+		return 'cat2';
+
+	}else if(distancia(mouse,cat1)<distancia(mouse,cat2)){
+		
+		return 'cat1';
+
+	}else{
+		return 'os gatos trombam e o rato foge';
+	}
+
+
 }
 
+//console.log(catAndMouse(1, 0, 2));
+
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+
+	for(let index=0;index<array.length;index+=1){
+		if (array[index]%3 == 0 && array[index]%5 != 0){
+
+			array[index]='fizz';
+
+		}else if(array[index]%5 == 0 && array[index]%3 != 0){
+
+			array[index]='buzz';
+
+		}else if(array[index]%5 == 0 && array[index]%3 == 0){
+			array[index]='fizzBuzz';
+		}else{
+			array[index]='bug!';
+		}
+	}
+
+	return array;
+
 }
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
