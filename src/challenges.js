@@ -270,12 +270,64 @@ function fizzBuzz(array) {
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let encode = [];
+  	for(let index=0;index<frase.length;index+=1){
+		encode[index]=frase[index];
+
+	}
+
+	for(let index=0;index<encode.length;index+=1){
+		
+		if(encode[index]=='a'){
+			encode[index]='1';
+		}else if(encode[index]=='e'){
+			encode[index]='2';
+		}else if(encode[index]=='i'){
+			encode[index]='3';
+		}else if(encode[index]=='o'){
+			encode[index]='4';
+		}else if(encode[index]=='u'){
+			encode[index]='5';
+		}
+		//console.log(index + ' e ' + encode[index]);
+	}
+	frase = encode.join('');
+	return frase;
+
 }
-function decode() {
-  // seu código aqui
+
+//console.log(encode("How are you today?"));
+
+function decode(frase) {
+	// seu código aqui
+	let decode = [];
+	for(let index=0;index<frase.length;index+=1){
+		decode[index]=frase[index];
+
+	}
+
+	for(let index=0;index<decode.length;index+=1){
+		
+		if(decode[index]=='1'){
+			decode[index]='a';
+		}else if(decode[index]=='2'){
+			decode[index]='e';
+		}else if(decode[index]=='3'){
+			decode[index]='i';
+		}else if(decode[index]=='4'){
+			decode[index]='o';
+		}else if(decode[index]=='5'){
+			decode[index]='u';
+		}
+		//console.log(index + ' e ' + decode[index]);
+	}
+	frase = decode.join('');
+	return frase;
 }
+
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
