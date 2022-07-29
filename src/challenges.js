@@ -299,7 +299,6 @@ function encode(frase) {
 }
 
 //console.log(encode("How are you today?"));
-
 function decode(frase) {
 	// seu código aqui
 	let decode = [];
@@ -327,12 +326,33 @@ function decode(frase) {
 	return frase;
 }
 
-console.log(decode("h3 th2r2!"));
+//console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
+function techList(array, pessoa) {
   // seu código aqui
+  if(array.length==0){
+	return "Vazio!"
+  }
+  let vetor = [];
+	function createObj(x, y){
+		return{
+			tech: x,
+			name: y
+		}
+
+	}
+	array.sort();
+	for(let index = 0; index<array.length; index+=1){
+
+		vetor.push(createObj(array[index], pessoa));
+	
+	}
+
+	return vetor;
+
 }
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas'));
 
 module.exports = {
   calcArea,
