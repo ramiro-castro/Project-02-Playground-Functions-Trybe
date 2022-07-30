@@ -104,7 +104,7 @@ let impedeExcesso=0;
 	}
 	return array2;
 }
-/*
+
 // Desafio 4
 function concatName(array) {
   // seu código aqui
@@ -288,4 +288,3 @@ module.exports = {
   splitSentence,
   techList,
 };
-*/
