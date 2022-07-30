@@ -94,7 +94,7 @@ function hydrate(string) {
   }
 }
 
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+//console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
